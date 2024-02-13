@@ -3,6 +3,8 @@ const imageOne = document.querySelector(".image-1");
 const imageTwo = document.querySelector(".image-2");
 const btnYes = document.querySelector(".btn-yes");
 const btnNo = document.querySelector(".btn-no");
+const text1 = document.querySelector(".text1");
+const text2 = document.querySelector(".text2");
 
 function getRandomNumber(min, max) {
   // Calculate the random number between min and max (inclusive)
@@ -34,7 +36,10 @@ btnNo.addEventListener("mouseover", (event) => {
 });
 
 btnYes.addEventListener("click", (e) => {
+  btnYes.classList.add("hide");
   btnNo.classList.add("hide");
   imageOne.classList.add("hide");
   imageTwo.classList.remove("hide");
+  text1.classList.add("hide");
+  text2.classList.remove("hide");
 });
